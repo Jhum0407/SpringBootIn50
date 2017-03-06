@@ -1,24 +1,47 @@
 package com.eightbitsbigbyte.entity;
 
-public class Account {
+import java.util.ArrayList;
 
+public class Account {
     private int id;
     private String accountType;
     private long balance;
     private double interestRate;
     private long overdraftPenalty;
     private long requiredMB;
+    private String firstName;
+    private String lastName;
+    private ArrayList<RecurringTransaction> recurringTransactions;
 
-    public Account(int id, String accountType, long balance, double interestRate, long overdraftPenalty, long requiredMB) {
-        this.id = id;
+    public Account(String accountType, long balance, double interestRate, long overdraftPenalty, long requiredMB, String firstName, String lastName) {
         this.accountType = accountType;
         this.balance = balance;
         this.interestRate = interestRate;
         this.overdraftPenalty = overdraftPenalty;
         this.requiredMB = requiredMB;
+        this.firstName = firstName;
+        this.lastName = lastName;
     }
 
     public Account(){}
+
+    public String getFirstName() {
+        return firstName;
+    }
+
+    public void setFirstName(String firstName) {
+        this.firstName = firstName;
+    }
+
+    public String getLastName() {
+        return lastName;
+    }
+
+    public void setLastName(String lastName) {
+        this.lastName = lastName;
+    }
+
+
 
     public int getId() {
         return id;
@@ -67,6 +90,16 @@ public class Account {
     public void setRequiredMB(long requiredMB) {
         this.requiredMB = requiredMB;
     }
+
+    public ArrayList<RecurringTransaction> getRecurringTransactions() {
+        return recurringTransactions;
+    }
+
+    public void setRecurringTransactions(ArrayList<RecurringTransaction> recurringTransactions) {
+        this.recurringTransactions = recurringTransactions;
+    }
+
+
 
 
 

@@ -30,13 +30,15 @@ public class AccountController {
         accountService.removeAccountById(id);
     }
 
-    @RequestMapping(method = RequestMethod.PUT, consumes = MediaType.APPLICATION_JSON_VALUE)
-    public void deleteAccountById(@RequestBody Account account){
-        accountService.updateAccount(account);
-    }
+//    @RequestMapping(method = RequestMethod.PUT, consumes = MediaType.APPLICATION_JSON_VALUE)
+//    public boolean deleteAccountById(@RequestBody Account account){
+//        accountService.updateAccount(account);
+//        return true;
+//    }
 
     @RequestMapping(value  = "/add", method = RequestMethod.POST, consumes = MediaType.APPLICATION_JSON_VALUE)
-    public void insertAccount(@RequestBody Account account){
+    public boolean insertAccount(@RequestBody Account account){
         accountService.insertAccount(account);
+        return true;
     }
 }

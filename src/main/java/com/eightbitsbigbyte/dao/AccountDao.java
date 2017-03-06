@@ -9,9 +9,13 @@ public interface AccountDao {
 
     Account getAccountById(int id);
 
+    Account getAccountByIdAndName(int id, String firstName, String lastName);
+
     void removeAccountById(int id);
 
-    void updateAccount(Account account);
+    void removeAccountByIdAndName(int id, String firstName, String lastName);
+
+//    void updateAccount(Account account);
 
     void insertAccountToDb(Account account);
 }
