@@ -23,14 +23,17 @@ public class AccountService {
         return this.accountDao.getAccountById(id);
     }
 
+    public void getAccountByIdAndName(int id, String firstName, String lastName){ this.accountDao.getAccountByIdAndName(id, firstName, lastName);}
 
     public void removeAccountById(int id) {
         this.accountDao.removeAccountById(id);
     }
 
-    public void updateAccount(Account account){
-        this.accountDao.updateAccount(account);
-    }
+    public void removeAccountByIdAndName(int id, String firstName, String lastName){ this.accountDao.removeAccountByIdAndName(id, firstName, lastName);}
+
+//    public void updateAccount(Account account){
+//        this.accountDao.updateAccount(account);
+//    }
 
     public void insertAccount(Account account) {
         this.accountDao.insertAccountToDb(account);
